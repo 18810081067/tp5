@@ -1,0 +1,96 @@
+数据库优化：负载均衡  主从复制  缓存集群 
+
+sql优化 建表优化   索引优化   sql语句优化   数据库表结构   系统配置优化   服务器硬件优化 分区、分表、锁表
+
+Redis 数据类型    哈希  队列  字符串(string)  集合(有序集合)
+
+Reids与memcached 区别  Redis支持数据比较多支持持久化存储，memcached不支持持久化存储
+
+数据库引擎Innodb和MySAM的区别  Innodb和MySAM都是数据存储引擎  Innodb对查询来说速度慢  支持事务  MySAM查询机制快  不支持事务
+
+php 魔术方法  析构  构造   克隆  get  set  未定义加载的类
+
+php 设计模式  单例模式   观察者模式  工厂模式 
+
+php  include和require区别  include和require都是引入文件   当引入的文件不存在  require会报致命错误终止执行  而include会提示错误，继续执行 require_one 只包含一次，避免了重复包含  
+
+http状态码  302重定向  404页面未找到  505服务器错误
+
+linux  修改权限命令   chmod -R 777  a.php   chown 文件或目录的属主和属组 
+
+chown - R yusi.users /demo   把目录/demo及其下的所有文件和子目录的属主改成yusi，属组改成users
+
+sql的优化分为两个部分，一是服务器物理硬件的优化，二是MySQL自身(my.cnf)的优化
+
+sql语句  union  可以合并两个或多个 SELECT 语句的结果集  
+				SELECT a FROM cai UNION SELECT xm FROM cookie
+
+sql语句  order by  可以对结果集 一个列 或者 多个列 进行排序
+				SELECT * FROM cookie ORDER BY pwd  DESC/ASC;
+
+sql语句  between  可以对两个值之间的数据范围，这些值可以是数值、文本或者日期
+				SELECT * FROM cai WHERE id BETWEEN 15 AND 18
+					SELECT * FROM cai WHERE id not BETWEEN 15 AND 18
+					    SELECT * FROM cookie WHERE xm BETWEEN 'A' AND 'C'
+sql语句  join     可以对两个或多个表中的 列 之间的关系
+	SELECT * FROM one_gongxuan,one_gongtou WHERE one_gongxuan.tou_id=one_gongtou.id
+
+	SELECT * FROM one_gongxuan  join one_gongtou on one_gongtou.id=one_gongxuan.tou_id
+
+sql语句  rbac子查询  select DISTINCT quan.* from quan where quan_id in(select quan_id from r_q where role_id in(select role_id from u_r where user_id=$user_id))";
+    				
+sql日志优化  优化mysql之前，首先要开启慢查询日志，在分析慢查询日志.     
+	1,查看所有日志状态： show variables like '%quer%';
+        2,查看慢查询状态：show variables like 'show%';  
+
+
+http和https区别   http和https两种不同的连接方式80和443  http连接很简单是无状态的 https有ssl加密 可进行加密传输 身份认证的网络协议  https要比http安全 
+
+tcp 传输层	三次握手  是连接进行协商理念 客户端发送服务器请求连接syn包 服务器收到请求 必须确认是客户端发送的 发送syn+ack 到客户端  客户端收到服务器请求包  向服务器确认ACK 完毕  客户端和服务器进入ESTABLISHED（TCP连接成功）状态，完成三次握手
+
+算法
+冒泡排序
+前一个数与后一个数比较 小于后一个数替换位置
+
+选择排序
+找最小值  默认$i   符合立刻就换位置  不然就位置不变
+
+快速排序
+默认下标第一数为比较值  值小的放左边   大的放右边 递归  合并
+
+插入排序
+获取一个有序值   判断比较换位置
+
+基数排序  
+定义十个空桶  数组最大值  最大值位数  计算基数  对应值放桶中  
+
+二分查找
+查的数  起始位置  结束位置  获取中间索引位置  判断计较
+
+
+随机数、token、签名、openssl实现非对称加密     非对称加密  公钥 私钥  对称加密 密钥
+
+
+token、sign和加密
+
+
+微信
+订阅号  个人  功能跟服务号差不多
+
+服务号 接口 公司 权限 公司 工商局有注册比编号
+
+测试号 权限少一点  100
+
+企业号 企业用的
+
+权限不一样
+
+ngrok  反向代理 免费     php5.4获取post原始数据
+
+urldecode  urlencode
+
+
+
+
+
+			

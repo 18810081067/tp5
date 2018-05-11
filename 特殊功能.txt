@@ -1,0 +1,159 @@
+登录加锁 
+解锁  登录   锁住后不能登录 状态0,1
+js 场景表单验证 页面特效（轮毂）登录验证
+	
+  file_exists() : 判断文件是否存在
+  Copy(): 拷贝一个文件，存储为另一个文件。
+  Unlink(): 删除一个文件
+  Filesize(): 获取文件的大小
+  Filemtime(): 文件的最后修改时间
+
+
+  Fopen()：打开一个文件
+  Fgets(): 获得文件的一行记录
+  fread(): 读取文件
+  fwrite(): 写入到文件
+  fclose(): 关闭一个已打开的文件指针
+sql   between  or   and   % _%第二个   order by desc  limit   in  join  left join 
+unique key 唯一键   表查询 尽量使用视图表 左联查 右关联表为空显示 右联查  左关联表 内联查 就差存在关联
+
+主从复制  server_id 开启bin log日志 io线程 获取数据 返回客户端 页面、数据库、数据、缓存分布式  
+ type:'post',
+ data:{'user':user},
+ dataType:'json',
+ url:          ajax 类型优先级
+
+正则
+/^\w+@qq(.\)com$/  处理 字符串 数组   业务 sql设计
+
+{2,} 最少2个
+{2,5} 最少2个最多5个
+  | 或	
++ 1-n
+* 0-n
+? 0-1
+. 所有单个字符
+/^ $/
+ i 忽略大小写
+ g 全局找值
+ m 多行找
+ \d 0-9 任意数字
+ \w 任意一个数字、字母、下划线  (\.)  [\u4e00-\u9fa5]中文
+用正则来验证字符串的函数是：preg_match();  遮罩层
+
+url重写   规则  正则匹配
+RewriteEngine On
+RewriteRule (.*)(\.)php$ $1.php
+RewriteRule (.*)(\d)html$ $1.php
+
+	
+   setcookie(‘cookie的名字’,’cookie的值’,过期时间)
+   $变量名=$_SESSION[‘名’]
+   删除单个session：unset($_SESSION[‘名’])
+   删除多个session：$_SESSON=array();
+   结束当前所有session：session_destroy()  move_uploaded_file()移动文件位置
+	
+文件下载
+//接收文件路径
+$path = $_GET['path'];
+$filename = substr($path,strrpos($path,"/")+1);
+
+$filename = basename($path);
+
+//文件类型
+header('Content-type: image/jpeg');
+//激活一个下载的窗口  (文件名)
+header("Content-Disposition: attachment; filename=$filename");
+//读文件
+readfile($path);   ajax技术 应用场景
+
+time、date、strtotime、 microtime、date_default_timezone_set、mktime 时间处理
+dirname、basename、pathinfo、opendir、readdir、closedir  对目录路径处理
+
+V C S/服务 D/路由 M
+
+订单号规则 不重复 由产品制定  咱附加规则   
+
+接口优化   时效性（规定时间）  代码要求 sql语句  业务场景 读 写
+
+_construct 构造函数操作对象传值
+_destruct  析构函数对象销毁
+__clone    克隆对象 复制一个
+_get  访问一个不存在或者权限不够的属性  获取属性名
+_set  方法赋值
+__isset  isset或者empty去判断一个权限不够或者不存在的对象属性   调用空
+__unset  销毁对象
+__call  权限不够或者不存在 触发的魔术方法
+__autoload 自动加载类  通过实例化类名的方式获得类的对象
+interface  定义接口
+
+社交网站
+用户信息：（登录，退出，写信，看信，招呼，更新心情）
+用户娱乐：（骂人，捣乱，示爱）
+
+
+接口    数据类型（方法）      应用型（外部调）
+
+App接口简介诶
+封装通信接口方法  难度
+核心技术          必备
+App接口实例
+服务器端->数据库|缓存->调用接口->客户端   抽象类  interface->implements
+接口地址 接口数据  解析数据  返回客户端   处理业务逻辑
+xml   可读性  json生成数据快、传输速度快   code 状态   message 返回格式  data返回数据
+ 
+单点登录 SSO    xmind  viso（业务技术）    亿图图
+
+单项散列加密 md5 32位 mcrypt  shar1 40位  算法    不可逆 单项加密
+
+url编码加密   urlencode  urldecode  rawurlencode rawurldecode 
+
+接口token生成规则参考如下：
+api_token = md5 ('模块名' + '控制器名' + '方法名' + '2013-12-18' + '加密密钥') = 770fed4ca2aabd20ae9a5dd774711de2
+
+
+sql.safe_mode=off php.ini 关闭
+
+sql注入 在查询网址 加sql 用户信息  找漏洞 %模拟  初始化你的变量  一定记得要过滤你的变量
+  
+csrf攻击   模拟用户操作 通过传值   get request post  服务端着手 但最终一致客户端页面增加伪随机数
+
+xss 反射js  存储 走数据库 没过滤 添加数据库  dom->对象 标签src广告植入    对用户输入的数据进行HTML Entity编码 过滤
+
+Dos 大量向服务器发送syn包造成资源消耗   利用标签地址向主服务器发送大量请求包  切断访问服务过滤包  将请求大量包返给攻击者
+
+E:\软工php六\第六月\程序插件必备  插件 时间、支付宝、复制、js完善、
+
+整体购物流程
+
+excel导出技术 
+
+第三方支付流程和实现技术   蠕虫反向代理加密   重写 正则  静态页
+ 
+商品sku概念和对应的属性差异
+
+购买流程并实现订单状态切换 递归算法、无限极分类、二级 联动流程和实现技巧  
+
+能够具备在有网情况下迅速上手各种组件、控件  绘制流程图 、E-R图能力、借助图形化工具快速明确需
+自我介绍，项目介绍，项目亮点，技术能力
+
+字符串、数组 处理  ajax无刷新、json传值、xml类型 pdo预处理 js 时间表单验证 type=date sql语句
+索引  查询快 支持sql 建索引 alter table  token加密  后台解密  单点登录  正则 匹配   负载均衡 
+ob_ 伪静态   url重写 
+
+webscket 微信小程序    feof
+
+分表  集群 将多个请求分发到别的服务器 垂直、  将大表字段 分多个表   水平、 按记录数据分不同服务器
+
+mysql分区 range按条件分日期 list基于列值匹配某个值 hash列值数据计算 key键值分 
+
+动静分离 页面先是静态   当访问是服务发送请求动态获取  分开
+
+后台 分层  模块分割 分布式 集群 缓存  代码 前台 浏览器访问优化 减少http请求 合并css和js 合并图片  使用浏览器缓存   反向代理  懒加载   图片压缩 移除重复脚本  图片分段加载  过滤空src 
+
+阮一峰的网络 CSDN  幕课 腾讯课堂
+
+ascii码  sphinx技术  coreseek技术
+
+mongodb 安装 mongodb扩展安装    七牛云开发
+
